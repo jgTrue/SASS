@@ -5,7 +5,7 @@ $alturaTabla: 500px;
 $anchoTabla: 500px;
 $fondoTabla: #100333;
 $colorFuente: #FFFFFF;
-
+$normalSize: 1em;
 $sizeFont: 1.5em;
 
 
@@ -18,13 +18,22 @@ $sizeFont: 1.5em;
 
 @mixin titular{
     background-color: $fondoTabla;
-    padding: 1em;
+    padding: $normalSize;
     color: #FFFFFF;
 }
 @mixin cuerpo{
     text-align: justify;
     word-spacing: 5px;
     letter-spacing: 2px;
+}
+@mixin tabla{
+    background-color: $fondoTabla;
+    height: $alturaTabla;
+    width: ($anchoTabla*1.5);
+}
+@mixin boton{
+    background-color: $fondoTabla;        
+    padding: $normalSize;
 }
 
 
@@ -36,13 +45,11 @@ body{
 .titulo{
     background-color: $fondoTabla;
     text-align: center;
-    padding: 1em;
+    padding: $normalSize;
 }
 
 .tabla{
-    background-color: $fondoTabla;
-    height: $alturaTabla;
-    width: ($anchoTabla*1.5);
+    @include tabla;
     td{
         border: 2px solid wheat;
     }
@@ -72,9 +79,9 @@ form{
     div{
         padding: 10px;
         button{
-            background-color: $fondoTabla;
+            @include boton;
             @extend body;
-            padding: 1em;
+
         }
     }
 }
