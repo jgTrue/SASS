@@ -7,6 +7,8 @@ $fondoTabla: #100333;
 $colorFuente: #FFFFFF;
 $normalSize: 1em;
 $sizeFont: 1.5em;
+$gradientColor: rgb(63,94,251);
+$gradientStyle: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 
 
 @function reducir($sizeFont, $num){
@@ -34,6 +36,10 @@ $sizeFont: 1.5em;
 @mixin boton{
     background-color: $fondoTabla;        
     padding: $normalSize;
+}
+@mixin gradient{
+    background: $gradientColor;
+    background: $gradientStyle;
 }
 
 
@@ -90,7 +96,7 @@ form{
     text-align: center;
     color: #000000;
     div{
-       background-color: #000000;
+        @include gradient;
         h2{
             @include titular;
         }
@@ -99,22 +105,34 @@ form{
             @include cuerpo;
         }
     }
-    #fila_0{
-        font-size:aumentar($sizeFont, 0.4) ;
+
+    @for $i from 0 through 5 {
+        #fila_#{$i} {font-size: aumentar($sizeFont, $i - 1.5) }
     }
-    #fila_1{
-        font-size: $sizeFont;
+
+    // #fila_0{
+    //     font-size:aumentar($sizeFont, 0.4) ;
+    // }
+    // #fila_1{
+    //     font-size: $sizeFont;
+    // }
+    // #fila_2{
+    //     font-size: reducir($sizeFont,0.4);
+    // }
+    // #fila_3{
+    //     font-size: reducir($sizeFont,0.6);
+    // }
+    // #fila_4{
+    //     font-size: reducir($sizeFont,0.9);
+    // }
+     
+}
+$numero:1;
+@while $numero<=6{
+    .item_#{$numero}{
+        letter-spacing: $numero +  1em;
     }
-    #fila_2{
-        font-size: reducir($sizeFont,0.4);
-    }
-    #fila_3{
-        font-size: reducir($sizeFont,0.6);
-    }
-    #fila_4{
-        font-size: reducir($sizeFont,0.9);
-    }
-    
+    $numero: $numero + 1;
     
 }
 

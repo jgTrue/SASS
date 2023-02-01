@@ -58,7 +58,8 @@ form div button {
   color: #000000;
 }
 .vista div {
-  background-color: #000000;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
 }
 .vista div h2 {
   background-color: #100333;
@@ -74,19 +75,46 @@ form div button {
   letter-spacing: 2px;
 }
 .vista #fila_0 {
-  font-size: 1.9em;
+  font-size: 0em;
 }
 .vista #fila_1 {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 .vista #fila_2 {
-  font-size: 1.1em;
+  font-size: 2em;
 }
 .vista #fila_3 {
-  font-size: 0.9em;
+  font-size: 3em;
 }
 .vista #fila_4 {
-  font-size: 0.6em;
+  font-size: 4em;
+}
+.vista #fila_5 {
+  font-size: 5em;
+}
+
+.item_1 {
+  letter-spacing: 2em;
+}
+
+.item_2 {
+  letter-spacing: 3em;
+}
+
+.item_3 {
+  letter-spacing: 4em;
+}
+
+.item_4 {
+  letter-spacing: 5em;
+}
+
+.item_5 {
+  letter-spacing: 6em;
+}
+
+.item_6 {
+  letter-spacing: 7em;
 }
 
 footer a {
