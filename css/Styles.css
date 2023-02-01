@@ -1,0 +1,74 @@
+.menu {
+  margin: 0;
+  background-color: black;
+}
+
+.tabla, .tabla-2 {
+  margin: 5%;
+  text-align: center;
+}
+
+body, form div button {
+  color: pink;
+}
+
+.titulo, li, footer {
+  background-color: #100333;
+  text-align: center;
+  padding: 1em;
+}
+
+.tabla, .tabla-2 {
+  background-color: #100333;
+  height: 500px;
+  width: 750px;
+}
+.tabla td, .tabla-2 td {
+  border: 2px solid wheat;
+}
+
+.tabla-2 {
+  color: #FFFFFF;
+}
+
+ol {
+  background-color: #000000;
+  height: 454.5454545455px;
+}
+
+li ul li {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+form {
+  margin: 125px;
+  color: #000000;
+}
+form div {
+  padding: 10px;
+}
+form div button {
+  background-color: #100333;
+  padding: 1em;
+}
+
+.vista {
+  text-align: center;
+  color: #000000;
+}
+.vista #fila_0 {
+  font-size: 1.9em;
+}
+.vista #fila_1 {
+  font-size: 1.5em;
+}
+.vista #fila_2 {
+  font-size: 1.1em;
+}
+.vista #fila_3 {
+  font-size: 0.9em;
+}
+.vista #fila_4 {
+  font-size: 0.6em;
+}

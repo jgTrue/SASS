@@ -1,0 +1,96 @@
+@import "components/margen";
+@import "components/tabla";
+
+$alturaTabla: 500px;
+$anchoTabla: 500px;
+$fondoTabla: #100333;
+$colorFuente: #FFFFFF;
+
+$sizeFont: 1.5em;
+
+
+
+
+
+
+body{
+    color: pink;
+}
+
+.titulo{
+    background-color: $fondoTabla;
+    text-align: center;
+    padding: 1em;
+}
+
+.tabla{
+    background-color: $fondoTabla;
+    height: $alturaTabla;
+    width: ($anchoTabla*1.5);
+    td{
+        border: 2px solid wheat;
+    }
+}
+
+.tabla-2{
+    @extend .tabla;
+    color: $colorFuente;
+    
+}
+
+footer{
+    @extend .titulo;
+}
+
+ol {
+    background-color: #000000;
+    height: ($alturaTabla/1.1);
+    }li{
+    @extend .titulo;
+        ul li{
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+}
+
+form{
+    margin: ($anchoTabla/4);
+    color: #000000;
+    div{
+        padding: 10px;
+        button{
+            background-color: $fondoTabla;
+            @extend body;
+            padding: 1em;
+        }
+    }
+}
+
+@function reducir($sizeFont, $num){
+    @return ($sizeFont - $num);
+}
+@function aumentar($sizeFont,$num){
+    @return($sizeFont + $num);
+}
+
+.vista{
+    text-align: center;
+    color: #000000;
+    #fila_0{
+        font-size:aumentar($sizeFont, 0.4) ;
+    }
+    #fila_1{
+        font-size: $sizeFont;
+    }
+    #fila_2{
+        font-size: reducir($sizeFont,0.4);
+    }
+    #fila_3{
+        font-size: reducir($sizeFont,0.6);
+    }
+    #fila_4{
+        font-size: reducir($sizeFont,0.9);
+    }
+    
+    
+}
