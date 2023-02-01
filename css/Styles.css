@@ -12,7 +12,7 @@ body, form div button {
   color: pink;
 }
 
-.titulo, li, footer {
+.titulo, footer, li {
   background-color: #100333;
   text-align: center;
   padding: 1em;
@@ -57,6 +57,22 @@ form div button {
   text-align: center;
   color: #000000;
 }
+.vista div {
+  background-color: #000000;
+}
+.vista div h2 {
+  background-color: #100333;
+  padding: 1em;
+  color: #FFFFFF;
+}
+.vista div p {
+  background-color: #100333;
+  padding: 1em;
+  color: #FFFFFF;
+  text-align: justify;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
 .vista #fila_0 {
   font-size: 1.9em;
 }
@@ -71,4 +87,14 @@ form div button {
 }
 .vista #fila_4 {
   font-size: 0.6em;
+}
+
+footer a {
+  background-color: #100333;
+  padding: 1em;
+  color: #FFFFFF;
+  text-align: justify;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  text-decoration: none;
 }

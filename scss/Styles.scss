@@ -9,7 +9,23 @@ $colorFuente: #FFFFFF;
 $sizeFont: 1.5em;
 
 
+@function reducir($sizeFont, $num){
+    @return ($sizeFont - $num);
+}
+@function aumentar($sizeFont,$num){
+    @return($sizeFont + $num);
+}
 
+@mixin titular{
+    background-color: $fondoTabla;
+    padding: 1em;
+    color: #FFFFFF;
+}
+@mixin cuerpo{
+    text-align: justify;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
 
 
 
@@ -35,12 +51,9 @@ body{
 .tabla-2{
     @extend .tabla;
     color: $colorFuente;
-    
 }
 
-footer{
-    @extend .titulo;
-}
+
 
 ol {
     background-color: #000000;
@@ -66,16 +79,19 @@ form{
     }
 }
 
-@function reducir($sizeFont, $num){
-    @return ($sizeFont - $num);
-}
-@function aumentar($sizeFont,$num){
-    @return($sizeFont + $num);
-}
-
 .vista{
     text-align: center;
     color: #000000;
+    div{
+       background-color: #000000;
+        h2{
+            @include titular;
+        }
+        p{
+            @include titular;
+            @include cuerpo;
+        }
+    }
     #fila_0{
         font-size:aumentar($sizeFont, 0.4) ;
     }
@@ -94,3 +110,13 @@ form{
     
     
 }
+
+footer{
+    @extend .titulo;
+    a{
+        @include titular;
+        @include cuerpo;
+        text-decoration: none;
+    }
+}
+
